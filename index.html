@@ -33,6 +33,9 @@
                 //so we can store their choices for use with the skill.
                 //see description of implicit grant flow here: 
                 //https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system
+                if (email == undefined) {
+                  alert('Please provide a valid Email ID');
+                } else {
                 location = returnUrl 
                             + "#state=" 
                             + amazonValues.state 
@@ -40,6 +43,7 @@
                             + "&access_token=" 
                             + email 
                             + "&token_type=Bearer";
+                      }
               }
           );
 
