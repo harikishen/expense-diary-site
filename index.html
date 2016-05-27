@@ -33,13 +33,13 @@
                 //so we can store their choices for use with the skill.
                 //see description of implicit grant flow here: 
                 //https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system
-                window.location = returnUrl 
+                location = returnUrl 
                             + "#state=" 
                             + amazonValues.state 
                             //the hack part
                             + "&access_token=" 
                             + email 
-                            + "&token_type=Bearer");
+                            + "&token_type=Bearer";
               }
           );
 
